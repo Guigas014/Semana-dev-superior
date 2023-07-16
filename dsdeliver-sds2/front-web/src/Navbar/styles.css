@@ -1,0 +1,23 @@
+/*@import url('../App.css');*/
+
+.main-navbar {
+  height: 9vh;
+  padding-left: 45px;
+  display: flex;
+  align-items: center;
+
+  background: var(--primary-color);
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: -0.015em;
+
+  line-height: 33px;
+  padding-left: 15px;
+
+  color: #FFF;
+}
+
+
