@@ -9,11 +9,22 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">Header</div>
-        <div class="main">Collections</div>
-        <div class="footer">Footer</div>
+        <div class="header">
+            <a href="/" class="logo">DSList</a>
+        </div>
+        <div class="main">
+            <div class="content">
+                <label for="" class="collection">Minhas Coleções</label>
+                <a  class="item-collection" href="games.html" onclick="teste()">Lista 01</a>
+                <a class="item-collection" href="games.html" onclick="teste()">Lista 02</a>
+            </div>
+        </div>
+        <div class="footer">
+            Made for Guilherme GITHUB(link)
+        </div>
     </div>
     
+
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js">
         const axios = require('axios');
     </script>
@@ -22,20 +33,23 @@
         async function getContent() {
             const title = document.getElementsByClassName('main')
 
-            try {
-                const { data } = await axios.get('http://localhost:8080/lists');
 
-                title[0].innerHTML = data[0].name
+            await axios.get('http://localhost:8080/lists')
+                .then((response) => {
+                    const list = response.data
 
-                console.log(data)
+                    title[0].innerHTML = list[0].name
 
-            } catch (error) {
-                console.log(error);
-            }
+                    console.log(response)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
         }
 
         getContent();
     </script>
 
+    <script src="/scripts.js"></script>
 </body>
 </html>
