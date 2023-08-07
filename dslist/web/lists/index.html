@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleções</title>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="logo">DSList</a>
+        </div>
+        <div class="main">
+            <label for="" class="collection">Minhas Coleções</label>
+            <div class="content"></div>
+            <div class="button-container">
+                <button class="back" onclick="back()">VOLTAR</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            Made by Guilherme
+            <a href="https://github.com/">
+                <i class="ph-bold ph-github-logo" style="color: #00a1ca"></i>
+            </a>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js">
+        const axios = require('axios');
+        // const axios = require('axios/dist/browser/axios.cjs');
+    </script>
+
+    <script src="scripts.js"></script>
+
+    <!-- <script>
+        async function getCollections() {
+            const content = document.getElementsByClassName('content')[0]
+
+
+            await axios.get('http://localhost:8080/lists')
+                .then((response) => {
+                    const list = response.data
+
+                    list.map(item => {
+                        const collection = document.createElement("a")
+                        collection.setAttribute("class", "item-collection")
+                        collection.setAttribute("href", "games.html")
+                        collection.setAttribute("onclick", "teste()")
+                        collection.innerHTML = item.name
+
+                        content.append(collection)
+                    })
+
+                    console.log(response)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
+
+        getCollections();
+    </script> -->
+
+   
+</body>
+</html>

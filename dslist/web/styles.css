@@ -89,7 +89,7 @@ img {
     justify-content: center;
     
     width: 35%;
-    height: 50vh;
-
-    border: solid #fff 1px;
+    height: 60vh;
+    
+    /* border: solid #fff 1px; */
 }
