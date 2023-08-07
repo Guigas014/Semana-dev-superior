@@ -141,6 +141,7 @@ function back() {
 function moveGame(event) {
     // console.log(listId)
     console.log(event.currentTarget.lastChild.innerHTML);
+    // window.location.host
 }
 
 function setMoveGame() {
